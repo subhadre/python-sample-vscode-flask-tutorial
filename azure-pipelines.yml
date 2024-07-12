@@ -1,0 +1,20 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  name: sush1-test
+  vmImage: sush-linux
+
+steps:
+  - bash: |
+      echo:"This is python application test"
+      apt-get install python -y
+      python --version
+    displayName: "First step"  
+   
+  
